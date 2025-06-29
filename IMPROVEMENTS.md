@@ -1,4 +1,4 @@
-# Wealth Portfolio RAG Agent - Improvements & Scalability Guide
+# Wealth Portfolio RAG Agent - Improvements & Scalability Guide 
 
 ## 🚀 Immediate Improvements
 
