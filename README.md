@@ -6,6 +6,9 @@ A comprehensive Natural Language Cross-Platform Data Query RAG Agent built for w
 
 This system manages wealth portfolios for film stars and sports personalities who have invested 100+ crores with our asset management firm. Client profiles are stored in MongoDB, while transaction data flows through MySQL database.
 
+## Video Overview
+https://drive.google.com/file/d/1Dp2Q4sNyMGTyh0XapbQtSiMyeCZ3UV8A/view?usp=sharing
+
 ## 🚀 Features
 
 ### Core Functionality
