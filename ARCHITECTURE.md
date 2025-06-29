@@ -1,4 +1,4 @@
-# Wealth Portfolio RAG Agent - Architecture Documentation
+# Wealth Portfolio RAG Agent - Architecture Documentation 
 
 ## 🏗️ System Overview
 
