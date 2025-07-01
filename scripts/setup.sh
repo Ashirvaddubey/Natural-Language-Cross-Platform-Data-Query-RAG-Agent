@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # Wealth Portfolio RAG Agent Setup Script
-
 echo "🚀 Setting up Wealth Portfolio RAG Agent..."
 
 # Check if Python is installed
@@ -9,27 +7,23 @@ if ! command -v python3 &> /dev/null; then
     echo "❌ Python 3 is not installed. Please install Python 3.8 or higher."
     exit 1
 fi
-
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
     echo "❌ Node.js is not installed. Please install Node.js 16 or higher."
     exit 1
 fi
-
 # Check if MongoDB is running
 if ! pgrep -x "mongod" > /dev/null; then
     echo "⚠️  MongoDB is not running. Please start MongoDB service."
     echo "   On Ubuntu/Debian: sudo systemctl start mongod"
     echo "   On macOS: brew services start mongodb-community"
 fi
-
 # Check if MySQL is running
 if ! pgrep -x "mysqld" > /dev/null; then
     echo "⚠️  MySQL is not running. Please start MySQL service."
     echo "   On Ubuntu/Debian: sudo systemctl start mysql"
     echo "   On macOS: brew services start mysql"
 fi
-
 echo "📦 Installing Python dependencies..."
 cd backend
 python3 -m pip install -r requirements.txt
