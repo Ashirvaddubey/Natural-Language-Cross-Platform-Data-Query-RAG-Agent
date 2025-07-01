@@ -2,13 +2,11 @@
 """
 Test script to verify database connections and API configuration
 """
-
 import mysql.connector
 from mysql.connector import Error
 from pymongo import MongoClient
 import requests
 import sys
-
 # Configuration (same as main.py)
 MONGODB_URL = "mongodb://localhost:27017/Valuefydb"
 MYSQL_CONFIG = {
@@ -18,7 +16,6 @@ MYSQL_CONFIG = {
     'password': 'Dubey@&2002'
 }
 OPENROUTER_API_KEY = "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"
-
 def test_mongodb():
     """Test MongoDB connection"""
     try:
@@ -38,7 +35,6 @@ def test_mongodb():
     except Exception as e:
         print(f"❌ MongoDB connection failed: {e}")
         return False
-
 def test_mysql():
     """Test MySQL connection"""
     try:
@@ -55,8 +51,7 @@ def test_mysql():
             cursor.execute("SHOW DATABASES LIKE 'wealth_portfolio'")
             db_exists = cursor.fetchone()
             if db_exists:
-                print("✅ Database 'wealth_portfolio' exists")
-                
+                print("✅ Database 'wealth_portfolio' exists")         
                 # Test tables
                 cursor.execute("USE wealth_portfolio")
                 cursor.execute("SHOW TABLES")
@@ -72,7 +67,6 @@ def test_mysql():
     except Error as e:
         print(f"❌ MySQL connection failed: {e}")
         return False
-
 def test_openrouter_api():
     """Test OpenRouter API connection"""
     try:
