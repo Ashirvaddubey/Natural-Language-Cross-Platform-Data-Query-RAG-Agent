@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,14 +19,12 @@ import {
 import PortfolioChart from "./PortfolioChart"
 import RecentTransactions from "./RecentTransactions"
 import TopClients from "./TopClients"
-
 interface DashboardStats {
   totalPortfolioValue: number
   totalClients: number
   totalTransactions: number
   monthlyGrowth: number
 }
-
 const Dashboard: React.FC = () => {
   const [stats, setStats] = useState<DashboardStats | null>(null)
   const [loading, setLoading] = useState(true)
@@ -43,11 +40,9 @@ const Dashboard: React.FC = () => {
       setLoading(false)
     }
   }
-
   useEffect(() => {
     fetchDashboardData()
   }, [])
-
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
       style: "currency",
@@ -56,11 +51,9 @@ const Dashboard: React.FC = () => {
       maximumFractionDigits: 0,
     }).format(amount)
   }
-
   const formatCrores = (amount: number) => {
     return `₹${(amount / 10000000).toFixed(2)} Cr`
   }
-
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center">
@@ -75,7 +68,6 @@ const Dashboard: React.FC = () => {
       </div>
     )
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
